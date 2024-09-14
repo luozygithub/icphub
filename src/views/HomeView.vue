@@ -83,19 +83,26 @@
         </div>
       </div>
     </div>
+    <div class="content4">
+      <HorizontalScroll/>
+    </div>
   </div>
 </template>
 
 <script>
-
+import HorizontalScroll from "@/components/HorizontalScroll.vue";
 export default {
   name: 'HomeView',
   components: {
+    HorizontalScroll
   }
 }
 </script>
 <style scoped lang="scss">
 .home{
+  .content4{
+    padding: 68px 0;
+  }
   .content3{
     background: #FFFFFF;
     padding-bottom: 70px;

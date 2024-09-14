@@ -54,5 +54,22 @@
   "aboutContent3LeftItem3": "Autonomous",
   "aboutContent3LeftItem4": "Web3 + OIS",
   "aboutContent3LeftItem5": "Simple",
-  "aboutContent3LeftItem6": "Next-gen AI"
+  "aboutContent3LeftItem6": "Next-gen AI",
+  "aboutContent3LeftButton": "Offcial ICP.HUBs",
+  "aboutContent3RightTitle": "Created by ∞ ICP",
+  "aboutContent3RightP": "The Internet Computer is created by ICP, the most advanced network protocol ever devised. It enables people to build Web3 services and enterprise systems directly on a public decentralized network, which scales even to hosting social networks and media streaming. Hosted services are tamperproof, don’t need firewalls, support Web3 functionality, and can trustlessly interact with the outside world.",
+
+  "aboutContent4Tip": "The organisation behind ICP",
+  "aboutContent4Title": "The DFINITY Foundation is a major contributor to the Internet Computer blockchain.",
+  "aboutContent4Item1": "Team Members",
+  "aboutContent4Item2": "Publications",
+  "aboutContent4Item3": "Citations",
+  "aboutContent4Item4": "Patents",
+  "aboutContent5Tip": "Join the Community",
+  "aboutContent5TittlePart1": "Learn，Connect，Create,Make an impact.",
+  "aboutContent5Button1": "Join the Community",
+  "aboutContent5Button2": "Start Learning"
+
+
+
 }

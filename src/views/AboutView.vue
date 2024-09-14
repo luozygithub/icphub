@@ -18,45 +18,99 @@
       <div class="content2-content">
         <div class="left">
           <div class="part-tip">
-            What it’s all about
+            {{$t("aboutContent3Tip")}}
           </div>
           <div class="part-title">
-            What is the Internet Computer
+            {{$t("aboutContent3LeftTitle")}}
           </div>
           <p>
-            The Internet Computer adds autonomous serverless cloud functionality to the public internet-making it
-            possible to build almost any system or service entirely on a decentralized network using “canister software”
-            ，an evolution of smart contracts.y.
+            {{$t("aboutContent3LeftP")}}
           </p>
           <div class="what-list">
-            <div class="list-item">
+            <div class="list-item" v-for="(item) in 6" :key="item">
               <img src="@/assets/images/item_icon.png" alt="" class="item-icon">
               <div class="name">
-                Tamperproof
-              </div>
-            </div>
-            <div class="list-item">
-              <img src="@/assets/images/item_icon.png" alt="" class="item-icon">
-              <div class="name">
-                Sovereign
+                {{$t("aboutContent3LeftItem"+(item))}}
               </div>
             </div>
           </div>
+          <button>
+            {{$t("aboutContent3LeftButton")}}
+          </button>
         </div>
         <div class="right">
           <div class="part-title">
-            Created by ∞ ICP
+            {{$t("aboutContent3RightTitle")}}
           </div>
           <p>
-            The Internet Computer is created by ICP, the most advanced network protocol ever devised. It enables people
-            to
-            build Web3 services and enterprise systems directly on a public decentralized network, which scales even to
-            hosting social networks and media streaming. Hosted services are tamperproof, don’t need firewalls, support
-            Web3 functionality, and can trustlessly interact with the outside world.
+            {{$t("aboutContent3RightP")}}
           </p>
 
         </div>
       </div>
+    </div>
+    <div class="content3">
+      <div class="content3-content">
+        <div class="part-tip">
+          {{$t("aboutContent4Tip")}}
+        </div>
+        <div class="part-title">
+          {{$t("aboutContent4Title")}}
+        </div>
+        <div class="lists">
+          <div class="item">
+            <div class="value">
+              270<span>+</span>
+            </div>
+            <div class="name">
+              {{$t("aboutContent4Item1")}}
+            </div>
+          </div>
+          <div class="item">
+            <div class="value">
+              1600<span>+</span>
+            </div>
+            <div class="name">
+              {{$t("aboutContent4Item2")}}
+            </div>
+          </div>
+          <div class="item">
+            <div class="value">
+              100<span>K+</span>
+            </div>
+            <div class="name">
+              {{$t("aboutContent4Item3")}}
+            </div>
+          </div>
+          <div class="item">
+            <div class="value">
+              250<span>+</span>
+            </div>
+            <div class="name">
+              {{$t("aboutContent4Item4")}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content4">
+      <div class="part-tip">
+        {{$t("aboutContent5Tip")}}
+      </div>
+      <div class="part-title">
+        {{$t("aboutContent5TittlePart1")}}
+      </div>
+      <div class="btns">
+        <div class="btn">
+          {{$t("aboutContent5Button1")}}
+        </div>
+        <div class="btn">
+          {{$t("aboutContent5Button2")}}
+        </div>
+      </div>
+    </div>
+    <div class="content5" >
+      <HorizontalScroll></HorizontalScroll>
     </div>
   </div>
 </template>
@@ -74,7 +128,109 @@
     text-align: center;
     font-style: normal;
   }
+  .content4{
+    background: #FAF8FF;
+    text-align: center;
+    padding: 88px 0 77px;
+    .part-tip{
+      font-family: PingFang SC, PingFang SC;
+      font-weight: 500;
+      font-size: 23px;
+      color: #9190B0;
+      line-height: 24px;
+    }
+    .part-title{
+      font-family: DM Sans, DM Sans;
+      font-weight: 700;
+      font-size: 56px;
+      color: #14358A;
+      line-height: 77px;
+      margin-top: 20px;
+    }
+    .btns{
+      display: flex;
+      justify-content: center;
+      margin-top: 45px;
+      .btn{
+        width: 220px;
+        height: 62px;
+        border-radius: 11px 11px 11px 11px;
+        border: 1px solid;
+        font-family: PingFang SC, PingFang SC;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+        display: flex;
 
+        justify-content: center;
+        align-items: center;
+        &:nth-child(1){
+          background: #000000;
+          color: #FFFFFF;
+        }
+        &:nth-child(2){
+          color: #6A36FF;
+          margin-left: 50px;
+          background: none;
+          border: 1px solid #6A36FF;
+
+        }
+      }
+
+    }
+  }
+  .content5{
+    padding: 68px 0;
+  }
+  .content3{
+    background: linear-gradient( 133deg, #A2A1FF 0%, #D5D4FF 100%);
+    border-radius: 0px 0px 0px 0px;
+    padding: 110px 0;
+    .content3-content{
+      width: 1274px;
+      max-width: 100%;
+      border-radius: 24px 24px 24px 24px;
+      margin:  0 auto;
+      .part-tip{
+        font-size: 41px;
+        color: #FFFFFF;
+        text-align: center;
+      }
+      .part-title{
+        font-family: PingFang SC, PingFang SC;
+        font-weight: 500;
+        font-size: 72px;
+        text-align: center;
+        margin-top: 72px;
+        color: #FFFFFF;
+      }
+      .lists{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 72px;
+        .item{
+          .value{
+            font-weight: 500;
+            font-size: 90px;
+            color: #FFFFFF;
+            line-height: 119px;
+            span{
+              color: #7e43f8;
+            }
+          }
+          .name{
+            font-family: PingFang SC, PingFang SC;
+            font-weight: 400;
+            font-size: 27px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
   .content1 {
     width: 1274px;
     max-width: 100%;
@@ -116,6 +272,8 @@
   }
 
   .content2 {
+    background: #F7F3FF;
+    padding: 65px 0 100px;
     .content2-content {
       width: 1274px;
       background: #F7F3FF;
@@ -157,6 +315,7 @@
         .what-list{
           display: flex;
           margin-top: 30px;
+          flex-wrap: wrap;
           .list-item{
             display: flex;
             align-items: center;
@@ -176,11 +335,31 @@
             }
           }
         }
+        button{
+          width: 297px;
+          height: 77px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 9px 9px 9px 9px;
+          border: 2px solid #6A36FF;
+          font-family: PingFang SC, PingFang SC;
+          font-weight: 600;
+          background: none;
+          cursor: pointer;
+          font-size: 23px;
+          color: #6A36FF;
+          line-height: 24px;
+          text-align: center;
+          font-style: normal;
+          text-transform: none;
+        }
       }
 
       .right {
         padding: 130px 5%;
         width: 44%;
+        border-radius: 14px 14px 14px 14px;
         background: linear-gradient( 136deg, #9F9FFF 0%, #D4B9FF 61%, #FFFFFF 120%);
         .part-title {
           color: #FFFFFF;
@@ -194,5 +373,11 @@
   }
 }
 </style>
-<script setup>
+<script >
+import HorizontalScroll from "@/components/HorizontalScroll.vue";
+export default {
+  components:{
+    HorizontalScroll
+  }
+}
 </script>
