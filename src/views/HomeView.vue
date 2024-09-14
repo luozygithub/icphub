@@ -155,6 +155,7 @@ export default {
           cursor: pointer;
           bottom: 50px;
           width: 180px;
+          background: none;
           height: 60px;
           border-radius: 11px 11px 11px 11px;
           border: 1px solid #6A36FF;
