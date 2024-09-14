@@ -119,7 +119,6 @@
   .title {
     margin: 120px auto 75px;
     width: 806px;
-    word-break: break-all;
     font-family: DM Sans, DM Sans;
     font-weight: 700;
     font-size: 60px;

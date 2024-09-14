@@ -44,7 +44,12 @@ ul {
 blockquote, q {
     quotes:none;
 }
-
+button{
+    cursor: pointer;
+}
+button:active{
+    transform: translate(3px,2px);
+}
 blockquote:before, blockquote:after,
 q:before, q:after {
     content:'';
