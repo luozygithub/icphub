@@ -197,8 +197,8 @@ export default {
     }
   }
   .title{
-    margin-top: 120px;
-    word-break: break-all;
+    width: 800px;
+    margin: 120px auto 0;
     font-family: DM Sans, DM Sans;
     font-weight: 700;
     font-size: 60px;
@@ -251,7 +251,9 @@ export default {
       margin: 0 auto;
       flex-direction: column;
     }
-
+    .title {
+      width: 90%;
+    }
     .content3 {
       .part-title {
         font-size: 36px;
