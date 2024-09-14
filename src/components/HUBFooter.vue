@@ -35,10 +35,7 @@ export default {
       <div class="right">
         <div class="link-list">
           <div class="list-item">
-            <a href=""><img src="@/assets/images/webside.png" alt=""></a>
-          </div>
-          <div class="list-item">
-            <a href=""><img src="@/assets/images/facebook.png" alt=""></a>
+            <a href="https://twitter.com/icphub_CN?s=09" target="_blank"><img src="@/assets/images/twitter.png" alt=""></a>
           </div>
         </div>
       </div>

@@ -61,7 +61,8 @@ img {
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
   img {
-    flex: 0 0 45%; /* Each image takes 45% of the container width on smaller screens */
+    width: 100%;
+    height: auto;
   }
 
   /* Adjust animation speed for smaller screens */

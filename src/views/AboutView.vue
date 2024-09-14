@@ -372,6 +372,141 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .about {
+    .title {
+      width: 90%;
+      font-size: 32px;
+      line-height: 40px;
+      margin: 60px auto 40px;
+    }
+
+    .content4 {
+      padding: 50px 0;
+      .part-tip {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .part-title {
+        font-size: 28px;
+        line-height: 36px;
+        margin-top: 10px;
+      }
+      .btns {
+        flex-direction: column;
+        align-items: center;
+        .btn {
+          width: 80%;
+          height: 50px;
+          font-size: 16px;
+          margin-left: 0!important;
+          &:nth-child(2) {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    .content5 {
+      padding: 40px 0;
+    }
+
+    .content3 {
+      padding: 50px 0;
+      .content3-content {
+        width: 90%;
+        .part-tip {
+          font-size: 24px;
+        }
+        .part-title {
+          font-size: 32px;
+          margin-top: 30px;
+        }
+        .lists {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 40px;
+          .item {
+            margin-top: 20px;
+            .value {
+              font-size: 48px;
+              line-height: 60px;
+            }
+            .name {
+              font-size: 18px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .content1 {
+      flex-direction: column;
+      margin: 80px auto 0;
+      padding: 20px;
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+        margin-left: 0;
+        p {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        .part-title {
+          font-size: 28px;
+          line-height: 36px;
+          margin: 30px 0 0;
+        }
+      }
+    }
+
+    .content2 {
+      padding: 40px 0;
+      .content2-content {
+        flex-direction: column;
+        padding: 0 20px;
+        .left {
+          width: 100%;
+          padding-right: 0;
+          .part-tip {
+            font-size: 18px;
+            margin-top: 30px;
+          }
+          .what-list {
+            .list-item {
+              width: 100%;
+              margin-bottom: 20px;
+              .name {
+                font-size: 16px;
+              }
+            }
+          }
+          button {
+            width: 100%;
+            height: 50px;
+            font-size: 18px;
+          }
+        }
+        .right {
+          width: 100%;
+          padding: 30px;
+          margin-top: 30px;
+          .part-title {
+            font-size: 24px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
 </style>
 <script >
 import HorizontalScroll from "@/components/HorizontalScroll.vue";

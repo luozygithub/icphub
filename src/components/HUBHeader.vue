@@ -1,7 +1,14 @@
 <script>
+import MenuCom from "@/components/MenuCom.vue";
+
 export default {
+  components:{
+    MenuCom
+  },
   data() {
-    return {}
+    return {
+
+    }
   },
   methods:{
     changeLng(){
@@ -20,20 +27,9 @@ export default {
   <div class="HUBHeader">
     <div class="header-box">
       <img src="@/assets/images/logo.png" alt="" class="logo">
-      <div class="nav-list">
-        <div class="nav-item" :class="{active:$route.path == '/'}" @click="$router.push('/')">
-          {{ $t("Home") }}
-        </div>
-        <div class="nav-item" :class="{active:$route.path == '/about'}" @click="$router.push('/about')">
-          {{ $t("About") }}
-        </div>
-        <div class="nav-item" :class="{active:$route.path == '/solutions'}" @click="$router.push('/solutions')">
-          {{ $t("Solutions") }}
-        </div>
-      </div>
+      <MenuCom  class="menu"/>
       <div class="right-content">
         <div class="join-btn">
-
           {{ $t("Join the Community") }}
         </div>
         <div class="btn" @click="changeLng">
@@ -109,6 +105,9 @@ export default {
     }
 
   }
+  .menu{
+    margin-left: 20px;
+  }
 }
 @media (max-width: 768px) {
   .HUBHeader {
@@ -121,8 +120,12 @@ export default {
       width: 100px;
       margin-bottom: 20px;
     }
-
+  .menu{
+    display: block;
+    width: 100px;
+  }
     .nav-list {
+      display: none;
       width: 100%;
       .nav-item {
         padding-right: 0;
