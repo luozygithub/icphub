@@ -178,7 +178,7 @@ export default {
             input {
               width: 70%; /* 调整宽度 */
               height: 60px; /* 增加高度 */
-              font-size: 20px; /* 增加字体大小 */
+              font-size: 16px; /* 增加字体大小 */
             }
             button {
               width: 120px; /* 增加宽度 */
