@@ -34,7 +34,6 @@
       <div class="content-list">
         <div class="list-item">
           <div class="item-title">
-
             {{$t('homeContent4PartTitle1')}}
           </div>
           <p>
@@ -46,7 +45,6 @@
         </div>
         <div class="list-item">
           <div class="item-title">
-
             {{$t('homeContent4PartTitle2')}}
           </div>
           <p>
@@ -244,6 +242,91 @@ export default {
     }
   }
 }
+@media (max-width: 1200px) {
+  .home {
+    .content1, .content2 .content2-content, .content3 .content-list {
+      width: 100%;
+      padding: 0 40px;
+      margin: 0 auto;
+      flex-direction: column;
+    }
+
+    .title {
+      width: 80%;
+      font-size: 40px;
+      line-height: 48px;
+      margin: 80px auto 60px;
+    }
+
+    .content3 {
+      .part-title {
+        font-size: 40px;
+        line-height: 50px;
+        padding-top: 50px;
+      }
+
+      .content-list {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 60px;
+
+        .list-item {
+          width: 30%;
+          margin-bottom: 40px;
+
+          button {
+            width: 180px;
+            height: 60px;
+            font-size: 18px;
+            line-height: 60px;
+          }
+        }
+      }
+    }
+
+    .content2 {
+      padding-bottom: 100px;
+
+      .part-title {
+        font-size: 40px;
+        margin-top: 60px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 60px;
+      }
+    }
+
+    .content1 {
+      flex-direction: row;
+      margin: 100px auto 0;
+      padding: 30px;
+
+      .left {
+        width: 50%;
+      }
+
+      .right {
+        width: 50%;
+        margin-left: 20px;
+
+        p {
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        .part-title {
+          font-size: 32px;
+          line-height: 40px;
+          margin: 40px 0 0;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .home {
     .content1, .content2 .content2-content, .content3 .content-list {

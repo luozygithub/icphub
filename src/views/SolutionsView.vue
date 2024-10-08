@@ -170,6 +170,62 @@
     }
   }
 }
+@media (max-width: 1200px) {
+  .about {
+    .part3 {
+      padding: 60px 0; /* 增加上内边距 */
+
+      button {
+        width: 60%; /* 调整宽度 */
+        height: 70px; /* 增加高度 */
+        font-size: 22px; /* 增加字体大小 */
+        line-height: 32px; /* 增加行高 */
+        margin-left: calc(20%); /* 增加左右间距 */
+      }
+
+      p {
+        width: 80%; /* 调整宽度 */
+        font-size: 18px; /* 增加字体大小 */
+        line-height: 26px; /* 增加行高 */
+        margin-top: 20px; /* 增加顶部间距 */
+      }
+    }
+
+    .part2 {
+      .content-list {
+        .list-item {
+          width: 100%;
+          padding: 60px 30px; /* 增加内边距 */
+
+          .title {
+            font-size: 36px; /* 增加字体大小 */
+            line-height: 42px; /* 增加行高 */
+            margin-bottom: 20px; /* 增加底部间距 */
+          }
+
+          p {
+            font-size: 20px; /* 增加字体大小 */
+            line-height: 30px; /* 增加行高 */
+          }
+        }
+      }
+    }
+
+    .part1 {
+      margin: 80px 0; /* 增加上下外边距 */
+
+      .sub-title {
+        font-size: 28px; /* 增加字体大小 */
+        line-height: 32px; /* 增加行高 */
+      }
+
+      .title {
+        font-size: 40px; /* 增加字体大小 */
+        margin-top: 20px; /* 增加顶部间距 */
+      }
+    }
+  }
+}
 
 @media (max-width: 768px) {
   .about {
