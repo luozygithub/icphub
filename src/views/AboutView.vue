@@ -521,12 +521,12 @@
 
         p {
           font-size: 20px;
-          line-height: 30px;
+          line-height: 28px;
         }
 
         .part-title {
           font-size: 32px;
-          line-height: 40px;
+          line-height: 30px;
           margin: 40px 0 0;
         }
       }
