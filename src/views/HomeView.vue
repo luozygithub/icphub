@@ -133,7 +133,8 @@ export default {
 
         &:hover {
           .item-title {
-            color: #000000;
+            color: #006FBA;
+
           }
         }
 
@@ -141,7 +142,7 @@ export default {
           font-family: PingFang SC, PingFang SC;
           font-weight: 600;
           font-size: 27px;
-          color: #006FBA;
+          color: #000000;
           line-height: 30px;
           text-align: center;
           font-style: normal;
@@ -241,7 +242,6 @@ export default {
       p {
         line-height: 38px;
         margin-top: 45px;
-
         font-family: PingFang SC, PingFang SC;
         font-weight: 400;
         font-size: 24px;

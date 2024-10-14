@@ -96,6 +96,7 @@ export default {
       font-size: 18px;
       color: #000000;
       justify-content: space-between;
+
       a{
         text-decoration: none;
         color: #000000;
@@ -109,11 +110,12 @@ export default {
       .right-content{
         .part-title{
           font-family: PingFang SC, PingFang SC;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 27px;
           color: #000000;
           line-height: 36px;
           margin-top: 18px;
+
         }
         .email{
           margin-top: 30px;
@@ -131,6 +133,7 @@ export default {
             line-height: 30px;
             padding-left: 16px;
             text-align: left;
+
             &::placeholder{
               color: #777777;
             }

@@ -117,8 +117,8 @@
 
 
         .title {
-          font-family: DM Sans, DM Sans;
-          font-weight: 700;
+          font-family: PingFang SC, PingFang SC;
+          font-weight: 500;
           font-size: 54px;
           color: #000000;
           line-height: 57px;
@@ -130,7 +130,9 @@
           font-weight: 400;
           font-size: 26px;
           color: #777777;
-          line-height: 41px;
+          line-height: 36px;
+          margin-top: 30px;
+
         }
 
         &:nth-child(2),&:nth-child(3)  {
@@ -142,6 +144,13 @@
 
           p {
             color: #FFFFFF;
+
+          }
+        }
+        &:nth-child(4){
+
+          p{
+            color: #000000;
           }
         }
       }

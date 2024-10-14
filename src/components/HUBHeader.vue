@@ -30,6 +30,7 @@ export default {
       <MenuCom  class="menu"/>
       <div class="right-content">
         <div class="join-btn">
+
           {{ $t("Join the Community") }}
         </div>
         <div class="btn" @click="changeLng">

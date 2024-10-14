@@ -36,6 +36,7 @@
           </div>
           <button>
             {{ $t("aboutContent3LeftButton") }}
+            <img style="margin-left: 5px" src="@/assets/images/right_icon.png" width="28" alt="" height="32">
           </button>
         </div>
         <div class="right">
@@ -102,10 +103,12 @@
       </div>
       <div class="btns">
         <div class="btn">
+          <img style="margin-right: 3px" src="@/assets/images/telegram.png" width="24" alt="">
           {{ $t("aboutContent5Button1") }}
         </div>
         <div class="btn">
           {{ $t("aboutContent5Button2") }}
+          <img style="margin-left: 3px" src="@/assets/images/right_icon.png" width="24" alt="">
         </div>
       </div>
     </div>
@@ -147,7 +150,8 @@
       font-size: 56px;
       color: #14358A;
       line-height: 77px;
-      margin-top: 20px;
+      width: 700px;
+      margin:  20px auto 0;
     }
 
     .btns {
@@ -251,11 +255,13 @@
     width: 1274px;
     max-width: 100%;
     background: #FFFFFF;
+    z-index: 1;
+    position: relative;
     border-radius: 24px 24px 24px 24px;
     padding: 52px;
     display: flex;
-    margin: 158px auto 0px;
 
+    margin: 158px auto 30px;
     .left {
       width: 44%;
       height: auto;
@@ -267,7 +273,6 @@
       p {
         line-height: 38px;
         margin-top: 45px;
-
         font-family: PingFang SC, PingFang SC;
         font-weight: 400;
         font-size: 24px;
@@ -289,7 +294,7 @@
 
   .content2 {
     background: #F7F3FF;
-    padding: 65px 0 100px;
+    padding: 0 0 100px;
 
     .content2-content {
       width: 1274px;
@@ -312,7 +317,8 @@
         font-weight: 400;
         font-size: 24px;
         color: #6B6A6F;
-        line-height: 40px;
+        line-height: 32px;
+
         text-align: left;
         font-style: normal;
         text-transform: none;
@@ -380,7 +386,7 @@
       }
 
       .right {
-        padding: 130px 5%;
+        padding: 100px 5% 0;
         width: 44%;
         border-radius: 14px 14px 14px 14px;
         background: linear-gradient(136deg, #9F9FFF 0%, #D4B9FF 61%, #FFFFFF 120%);
