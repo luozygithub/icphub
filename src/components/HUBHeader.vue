@@ -109,6 +109,56 @@ export default {
     margin-left: 20px;
   }
 }
+@media (max-width: 1200px) {
+  .HUBHeader {
+    width: 100%;
+    padding: 20px 40px; /* 增加内边距 */
+    flex-direction: row; /* 保持行方向以适应较大屏幕 */
+    align-items: center; /* 垂直居中对齐 */
+
+    .logo {
+      width: 120px; /* 增加宽度 */
+      margin-bottom: 0; /* 移除底部间距 */
+    }
+
+    .menu {
+      display: block;
+      width: 120px; /* 增加宽度 */
+    }
+
+    .nav-list {
+      display: flex; /* 改为 flex 显示以适应大屏 */
+      width: 100%;
+      flex-direction: row; /* 行方向 */
+      justify-content: space-between; /* 在大屏上均匀分布 */
+
+      .nav-item {
+        padding-right: 20px; /* 增加右边距 */
+        padding-bottom: 0; /* 移除底部间距 */
+        font-size: 16px; /* 增加字体大小 */
+        width: auto; /* 自动宽度 */
+        text-align: center; /* 中心对齐 */
+      }
+    }
+
+    .right-content {
+      margin-top: 0; /* 移除顶部间距 */
+      width: auto; /* 自动宽度 */
+      justify-content: flex-end; /* 向右对齐 */
+
+      .join-btn {
+        padding: 10px 20px; /* 增加内边距 */
+        font-size: 14px; /* 增加字体大小 */
+      }
+
+      .btn {
+        font-size: 14px; /* 增加字体大小 */
+        margin-left: 20px; /* 增加左边距 */
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .HUBHeader {
     width: 100%;

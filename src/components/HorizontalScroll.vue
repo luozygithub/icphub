@@ -27,7 +27,7 @@ export default {
 </script>
 <style scoped>
 .scroll-container {
-  width: 100vw; /* Full screen width */
+  width: 100% ;/* Full screen width */
   overflow: hidden; /* Hide the scrollbar */
   white-space: nowrap; /* Prevent line breaks */
 }

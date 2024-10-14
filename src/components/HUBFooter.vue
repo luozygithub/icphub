@@ -117,6 +117,8 @@ export default {
         }
         .email{
           margin-top: 30px;
+          display: flex;
+          align-items: center;
           input{
             width: 509px;
             height: 88px;
@@ -155,6 +157,76 @@ export default {
     height: 60px;
   }
 }
+@media (max-width: 1200px) {
+  .footer {
+    padding: 60px 0 0; /* 增加顶部内边距 */
+
+    .footer-content {
+      width: 100%;
+      padding: 0 40px; /* 增加侧边内边距 */
+
+      .part1, .part2, .part3 {
+        flex-direction: column; /* 保持列方向 */
+        align-items: center; /* 中心对齐 */
+        text-align: center; /* 中心对齐文本 */
+      }
+
+      .part1 {
+        .right-content {
+          .email {
+            display: flex;
+            input {
+              width: 70%; /* 调整宽度 */
+              height: 60px; /* 增加高度 */
+              font-size: 16px; /* 增加字体大小 */
+            }
+            button {
+              width: 120px; /* 增加宽度 */
+              height: 60px; /* 增加高度 */
+              font-size: 20px; /* 增加字体大小 */
+            }
+          }
+        }
+      }
+
+      .part2 {
+        padding: 30px 0; /* 增加上下内边距 */
+        flex-direction: column;
+
+        a {
+          margin: 0 30px 30px; /* 增加边距 */
+        }
+
+        .right {
+          margin-top: 30px; /* 增加顶部边距 */
+        }
+      }
+
+      .part3 {
+        flex-direction: column;
+        padding: 30px 0; /* 增加上下内边距 */
+
+        .right {
+          margin-top: 30px; /* 增加顶部边距 */
+
+          .link-list {
+            justify-content: center;
+
+            .list-item {
+              margin-left: 15px; /* 增加左边距 */
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 250px; /* 增加宽度 */
+    height: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 40px 0 0;
