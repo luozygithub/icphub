@@ -162,16 +162,7 @@
 
   .part1 {
     margin: 110px 0;
-    position: relative;
-    .bg-box{
-      position: absolute;
-      top: -200px;
-      left: calc(50% - 500px);
-      width: 1000px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(239, 229, 245, 0.6), rgba(230, 189, 252, 0.6));
-      filter: blur(135px);
-    }
+
     .sub-title {
       text-align: center;
       font-family: DM Sans, DM Sans;

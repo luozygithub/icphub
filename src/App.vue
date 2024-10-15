@@ -27,6 +27,16 @@ export default {
   background-size: 100%;
   min-height: 100vh;
   position: relative;
+  .bg-box{
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 500px);
+    width: 60%;
+    z-index: 0;
+    height: 600px;
+    background: radial-gradient(circle, rgba(239, 229, 245, 0.6), rgba(230, 189, 252, 0.6));
+    filter: blur(135px);
+  }
   .appbg{
     height: 1050px;
     width: 100%;

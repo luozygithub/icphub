@@ -1,9 +1,12 @@
 <template>
   <div class="about">
+    <div class="bg-box"></div>
+
     <div class="title">
       {{ $t("aboutTitle") }}
     </div>
     <div class="content1">
+
       <img src="@/assets/images/home_img1.png" alt="" class="left">
       <div class="right">
         <div class="part-title">
@@ -129,6 +132,8 @@
     line-height: 66px;
     text-align: center;
     font-style: normal;
+    position: relative;
+    z-index: 1;
   }
 
   .content4 {
@@ -258,20 +263,23 @@
     width:  90%;
     max-width: 100%;
     background: #FFFFFF;
-    z-index: 1;
-    position: relative;
     border-radius: 24px 24px 24px 24px;
     padding: 50px;
     display: flex;
     margin: 130px auto 0px;
+    position: relative;
+    z-index: 1;
     .left {
       width: 44%;
       height: auto;
+      position: relative;
+      z-index: 1;
     }
 
     .right {
       margin-left: 50px;
-
+      position: relative;
+      z-index: 1;
       p {
         line-height: 38px;
         margin-top: 45px;
@@ -287,6 +295,7 @@
         font-size: 60px;
         color: #000000;
         line-height: 64px;
+
         text-align: left;
         font-style: normal;
         margin: 60px 0 0 0px;
@@ -297,7 +306,8 @@
   .content2 {
     background: #F7F3FF;
     padding: 0 0 100px;
-
+    position: relative;
+    z-index: 1;
     .content2-content {
       width:  90%;
       background: #F7F3FF;
@@ -542,11 +552,12 @@
 
     .content2 {
       padding: 60px 0;
-
+      position: relative;
+      z-index: 1;
       .content2-content {
         flex-direction: row;
-        padding: 0 40px;
-
+        padding: 0  0 0 20px;
+        width: 100%;
         .left {
           width: 50%;
           padding-right: 20px;

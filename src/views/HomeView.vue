@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <div class="bg-box"></div>
     <h1 class="title">
       {{ $t('hometitle1') }}
     </h1>
@@ -220,9 +221,13 @@ export default {
     line-height: 66px;
     text-align: center;
     font-style: normal;
+    position: relative;
+    z-index: 1;
   }
 
   .content1 {
+    position: relative;
+    z-index: 1;
     width:  90%;
     max-width: 100%;
     background: #FFFFFF;
