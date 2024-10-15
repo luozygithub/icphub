@@ -2,19 +2,17 @@
 import MenuCom from "@/components/MenuCom.vue";
 
 export default {
-  components:{
+  components: {
     MenuCom
   },
   data() {
-    return {
-
-    }
+    return {}
   },
-  methods:{
-    changeLng(){
-      if(this.$i18n.locale == 'zh'){
+  methods: {
+    changeLng() {
+      if (this.$i18n.locale == 'zh') {
         this.$i18n.locale = 'en'
-      }else{
+      } else {
         this.$i18n.locale = 'zh'
       }
 
@@ -27,15 +25,14 @@ export default {
   <div class="HUBHeader">
     <div class="header-box">
       <img src="@/assets/images/logo.png" alt="" class="logo">
-      <MenuCom  class="menu"/>
+      <MenuCom class="menu"/>
       <div class="right-content">
         <div class="join-btn">
-
           {{ $t("Join the Community") }}
         </div>
         <div class="btn" @click="changeLng">
           <div v-show="$i18n.locale == 'zh'"> EN/ <strong>中文</strong></div>
-          <div v-show="$i18n.locale == 'en'"> <strong>EN</strong>/中文</div>
+          <div v-show="$i18n.locale == 'en'"><strong>EN</strong>/中文</div>
         </div>
       </div>
     </div>
@@ -44,8 +41,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
-.header-box{
-  width: 1200px;
+.header-box {
+  min-width: 1200px;
+  width: 90%;
   max-width: 100%;
   margin: 0px auto;
   padding: 24px 0;
@@ -53,10 +51,12 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
+
 .HUBHeader {
   .right-content {
     display: flex;
     align-items: center;
+
     .join-btn {
       padding: 10px 20px;
       justify-content: center;
@@ -70,7 +70,8 @@ export default {
       align-items: center;
       cursor: pointer;
     }
-    .btn{
+
+    .btn {
       margin-left: 20px;
       cursor: pointer;
     }
@@ -106,17 +107,22 @@ export default {
     }
 
   }
-  .menu{
+
+  .menu {
     margin-left: 20px;
   }
 }
+
 @media (max-width: 1200px) {
   .HUBHeader {
     width: 100%;
     padding: 20px 40px; /* 增加内边距 */
     flex-direction: row; /* 保持行方向以适应较大屏幕 */
     align-items: center; /* 垂直居中对齐 */
+    .header-box{
+      min-width: 0px!important;
 
+    }
     .logo {
       width: 120px; /* 增加宽度 */
       margin-bottom: 0; /* 移除底部间距 */
@@ -166,18 +172,23 @@ export default {
     padding: 16px 20px;
     flex-direction: column;
     align-items: flex-start;
-
+    .header-box{
+      justify-content: space-between;
+    }
     .logo {
       width: 100px;
       margin-bottom: 20px;
     }
-  .menu{
-    display: block;
-    width: 100px;
-  }
+
+    .menu {
+      display: block;
+      width: 100px;
+    }
+
     .nav-list {
       display: none;
       width: 100%;
+
       .nav-item {
         padding-right: 0;
         padding-bottom: 10px;
@@ -195,6 +206,8 @@ export default {
       .join-btn {
         padding: 8px 16px;
         font-size: 12px;
+        width: 80px;
+        text-align: center;
       }
 
       .btn {

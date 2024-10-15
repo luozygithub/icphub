@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <div class="part1">
+      <div class="bg-box"></div>
       <div class="sub-title">
         {{ $t('solutionPart1Title1') }}
       </div>
@@ -102,6 +103,8 @@
   }
 
   .part2 {
+    position: relative;
+    z-index: 1;
     width: 100%;
 
     .content-list {
@@ -159,7 +162,16 @@
 
   .part1 {
     margin: 110px 0;
-
+    position: relative;
+    .bg-box{
+      position: absolute;
+      top: -200px;
+      left: calc(50% - 500px);
+      width: 1000px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(239, 229, 245, 0.6), rgba(230, 189, 252, 0.6));
+      filter: blur(135px);
+    }
     .sub-title {
       text-align: center;
       font-family: DM Sans, DM Sans;
@@ -167,9 +179,13 @@
       font-size: 36px;
       color: #FFFFFF;
       line-height: 40px;
+      position: relative;
+      z-index: 1;
     }
 
     .title {
+      position: relative;
+      z-index: 1;
       font-family: DM Sans, DM Sans;
       font-weight: 700;
       font-size: 68px;

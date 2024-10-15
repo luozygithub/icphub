@@ -23,7 +23,7 @@ export default {
 </script>
 <style lang="scss">
 #app{
-  background: linear-gradient( 123deg, rgba(242,234,255,0.4) 0%, rgba(220,219,253,0.4) 100%);
+  //background: linear-gradient( 123deg, rgba(242,234,255,0.4) 0%, rgba(220,219,253,0.4) 100%);
   background-size: 100%;
   min-height: 100vh;
   position: relative;

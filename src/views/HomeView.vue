@@ -118,7 +118,7 @@ export default {
 
     .content-list {
       display: flex;
-      width: 1274px;
+      width:  90%;
       max-width: 100%;
       margin: 0 auto;
       justify-content: space-between;
@@ -188,7 +188,7 @@ export default {
     padding-bottom: 170px;
 
     .content2-content {
-      width: 1274px;
+      width:  90%;
       max-width: 100%;
       margin: 0 auto;
 
@@ -223,13 +223,13 @@ export default {
   }
 
   .content1 {
-    width: 1274px;
+    width:  90%;
     max-width: 100%;
     background: #FFFFFF;
     border-radius: 24px 24px 24px 24px;
-    padding: 52px;
+    padding: 50px;
     display: flex;
-    margin: 158px auto 0px;
+    margin: 130px auto 0px;
 
     .left {
       width: 44%;
@@ -244,7 +244,7 @@ export default {
         margin-top: 45px;
         font-family: PingFang SC, PingFang SC;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 22px;
         color: #8883A7;
       }
 
@@ -256,7 +256,7 @@ export default {
         line-height: 64px;
         text-align: left;
         font-style: normal;
-        margin: 60px 0 0 30px;
+        margin: 60px 0 0 0px;
       }
     }
   }
@@ -390,16 +390,20 @@ export default {
     .content2 {
       padding-bottom: 80px;
 
-      .part-title {
-        font-size: 36px;
-        margin-top: 50px;
+
+      .content2-content{
+        font-size: 18px;
+        .part-title {
+          font-size: 36px;
+          margin-top: 50px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 28px;
+          margin-top: 50px;
+        }
       }
 
-      p {
-        font-size: 18px;
-        line-height: 28px;
-        margin-top: 50px;
-      }
     }
 
     .title {
@@ -420,7 +424,7 @@ export default {
 
       .right {
         margin-left: 0;
-
+        width: 100%;
         p {
           font-size: 18px;
           line-height: 28px;

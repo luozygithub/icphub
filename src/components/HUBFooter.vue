@@ -50,7 +50,7 @@ export default {
   padding: 70px 0 0px;
   background: linear-gradient( 70deg, #F1F0FD 0%, #B9BAFF 100%);
   .footer-content{
-    width: 1274px;
+    width:  90%;
     max-width: 100%;
     margin: 0 auto;
     .part3{
@@ -176,6 +176,7 @@ export default {
 
       .part1 {
         .right-content {
+
           .email {
             display: flex;
             input {
@@ -225,7 +226,7 @@ export default {
   }
 
   .logo {
-    width: 250px; /* 增加宽度 */
+    width: 250px;
     height: auto;
   }
 }
@@ -245,6 +246,9 @@ export default {
 
       .part1 {
         .right-content {
+          .part-title{
+            font-size: 18px;
+          }
           .email {
             display: flex;
             input {
@@ -289,7 +293,7 @@ export default {
   }
 
   .logo {
-    width: 200px;
+    width: 60%;
     height: auto;
   }
 }

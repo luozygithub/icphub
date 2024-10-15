@@ -34,7 +34,7 @@
               </div>
             </div>
           </div>
-          <button>
+          <button >
             {{ $t("aboutContent3LeftButton") }}
             <img style="margin-left: 5px" src="@/assets/images/right_icon.png" width="28" alt="" height="32">
           </button>
@@ -151,6 +151,7 @@
       color: #14358A;
       line-height: 77px;
       width: 700px;
+      max-width: 100%;
       margin:  20px auto 0;
     }
 
@@ -170,7 +171,8 @@
         line-height: 25px;
         text-align: left;
         display: flex;
-
+        cursor: pointer;
+        user-select: none;
         justify-content: center;
         align-items: center;
 
@@ -201,7 +203,7 @@
     padding: 110px 0;
 
     .content3-content {
-      width: 1274px;
+      width:  90%;
       max-width: 100%;
       border-radius: 24px 24px 24px 24px;
       margin: 0 auto;
@@ -227,13 +229,14 @@
         margin-top: 72px;
 
         .item {
+          font-family: PingFang SC, PingFang SC;
           .value {
             font-weight: 500;
             font-size: 90px;
             color: #FFFFFF;
             line-height: 119px;
-
             span {
+              font-family: PingFang SC, PingFang SC;
               color: #7e43f8;
             }
           }
@@ -252,16 +255,15 @@
   }
 
   .content1 {
-    width: 1274px;
+    width:  90%;
     max-width: 100%;
     background: #FFFFFF;
     z-index: 1;
     position: relative;
     border-radius: 24px 24px 24px 24px;
-    padding: 52px;
+    padding: 50px;
     display: flex;
-
-    margin: 158px auto 30px;
+    margin: 130px auto 0px;
     .left {
       width: 44%;
       height: auto;
@@ -275,7 +277,7 @@
         margin-top: 45px;
         font-family: PingFang SC, PingFang SC;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 22px;
         color: #8883A7;
       }
 
@@ -287,7 +289,7 @@
         line-height: 64px;
         text-align: left;
         font-style: normal;
-        margin: 60px 0 0 30px;
+        margin: 60px 0 0 0px;
       }
     }
   }
@@ -297,7 +299,7 @@
     padding: 0 0 100px;
 
     .content2-content {
-      width: 1274px;
+      width:  90%;
       background: #F7F3FF;
       max-width: 100%;
       margin: 0 auto;
@@ -306,16 +308,16 @@
       .part-title {
         font-family: PingFang SC, PingFang SC;
         font-weight: 500;
-        font-size: 54px;
+        font-size: 36px;
         color: #000000;
-        line-height: 57px;
+        line-height: 40px;
         margin-top: 38px;
       }
 
       p {
         font-family: PingFang SC, PingFang SC;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 18px;
         color: #6B6A6F;
         line-height: 32px;
 
@@ -373,7 +375,7 @@
           border-radius: 9px 9px 9px 9px;
           border: 2px solid #6A36FF;
           font-family: PingFang SC, PingFang SC;
-          font-weight: 600;
+          font-weight: 500;
           background: none;
           cursor: pointer;
           font-size: 23px;
