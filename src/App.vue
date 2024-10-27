@@ -17,25 +17,55 @@ export default {
   components:{
     HUBHeader,
     HUBFooter
+  },
+  mounted() {
+
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);  // 只触发一次，进入视口后不再观察
+        }
+      });
+    }, { threshold: 0.1 });  // 10% 可见时触发
+
+    fadeInSections.forEach(section => observer.observe(section));
   }
 
 }
 </script>
 <style lang="scss">
+body, button, input, select, p {
+
+  line-height: 1.5!important;
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);  /* 回到正常位置 */
+}
 #app{
   //background: linear-gradient( 123deg, rgba(242,234,255,0.4) 0%, rgba(220,219,253,0.4) 100%);
   background-size: 100%;
   min-height: 100vh;
   position: relative;
+  padding-top: 130px;
   .bg-box{
     position: absolute;
-    top: 100px;
+    top: 60px;
     left: calc(50% - 500px);
-    width: 60%;
+    width: 1000px;
     z-index: 0;
-    height: 600px;
-    background: radial-gradient(circle, rgba(239, 229, 245, 0.6), rgba(230, 189, 252, 0.6));
-    filter: blur(135px);
+    height: 1000px;
+    background: radial-gradient(circle, rgb(224, 173, 253), rgba(213, 150, 248, 0.2));
+    //background: url("../../assets/images/app_bg.png");
+    filter: blur(300px);
   }
   .appbg{
     height: 1050px;
@@ -48,6 +78,15 @@ export default {
   .app-content{
     position: relative;
     z-index: 1;
+  }
+}
+@media (max-width: 1200px) {
+  #app{
+    .bg-box{
+
+      width: 100%;
+
+    }
   }
 }
 </style>

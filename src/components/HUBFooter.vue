@@ -51,17 +51,17 @@ export default {
   background: linear-gradient( 70deg, #F1F0FD 0%, #B9BAFF 100%);
   .footer-content{
     width:  90%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     .part3{
       display: flex;
       padding: 20px 0 40px;
       justify-content: space-between;
       .left{
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 36px;
+        font-size: 16px;
+        line-height: 30px;
         color: #999999;
       }
       .right{
@@ -88,10 +88,9 @@ export default {
     }
     .part2{
       display: flex;
-      padding: 40px 0;
-      border-top:  1px solid rgba(149, 149, 149, 0.52);;
+      padding: 20px 0;
       border-bottom:  1px solid rgba(149, 149, 149, 0.52);
-      font-family: PingFang SC, PingFang SC;
+      font-family: Poppins, Poppins;
       font-weight: 500;
       font-size: 18px;
       color: #000000;
@@ -106,10 +105,10 @@ export default {
     .part1{
       display: flex;
       justify-content: space-between;
-      padding-bottom: 120px;
+      padding-bottom: 60px;
       .right-content{
         .part-title{
-          font-family: PingFang SC, PingFang SC;
+          font-family: Poppins, Poppins;
           font-weight: 500;
           font-size: 27px;
           color: #000000;
@@ -122,14 +121,14 @@ export default {
           display: flex;
           align-items: center;
           input{
-            width: 509px;
-            height: 88px;
+            width: 450px;
+            height: 60px;
             background: #FFFFFF;
             border-radius: 14px 14px 14px 14px;
             border: 1px solid #8687DF;
-            font-family: PingFang SC, PingFang SC;
+            font-family: Poppins, Poppins;
             font-weight: 400;
-            font-size: 23px;
+            font-size: 18px;
             line-height: 30px;
             padding-left: 16px;
             text-align: left;
@@ -139,15 +138,15 @@ export default {
             }
           }
           button{
-            width: 127px;
-            height: 88px;
+            width: 120px;
+            height: 60px;
             background: #7E8AFD;
             border-radius: 14px 14px 14px 14px;
             margin-left: 18px;
             border: none;
             font-family: DM Sans, DM Sans;
             font-weight: 700;
-            font-size: 23px;
+            font-size: 20px;
             color: #FFFFFF;
           }
         }

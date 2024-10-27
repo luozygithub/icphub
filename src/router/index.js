@@ -20,10 +20,14 @@ const routes = [
     name: 'solutions',
     component: () => import(/* webpackChunkName: "about" */ '../views/SolutionsView.vue')
   }
+
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior() {
+    return { x: 0, y: 0 }; // 滚动到顶部
+  },
 })
 
 export default router

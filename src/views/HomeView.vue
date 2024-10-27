@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <div class="bg-box"></div>
-    <h1 class="title">
+    <h1 class="title fade-in-section">
       {{ $t('hometitle1') }}
     </h1>
-    <div class="content1">
+    <div class="content1 fade-in-section">
       <img src="@/assets/images/home_img1.png" alt="" class="left">
       <div class="right">
         <div class="part-title">
@@ -18,7 +18,7 @@
         </p>
       </div>
     </div>
-    <div class="content2">
+    <div class="content2 fade-in-section">
       <div class="content2-content">
         <div class="part-title">
           {{ $t('hometitle3') }}
@@ -28,7 +28,7 @@
         </p>
       </div>
     </div>
-    <div class="content3">
+    <div class="content3 fade-in-section">
       <div class="part-title">
         {{ $t('hometitle4') }}
       </div>
@@ -57,7 +57,6 @@
         </div>
         <div class="list-item">
           <div class="item-title">
-
             {{ $t('homeContent4PartTitle3') }}
           </div>
           <p>
@@ -70,7 +69,6 @@
 
         <div class="list-item">
           <div class="item-title">
-
             {{ $t('homeContent4PartTitle4') }}
           </div>
           <p>
@@ -82,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="content4">
+    <div class="content4 fade-in-section">
       <HorizontalScroll/>
     </div>
   </div>
@@ -95,21 +93,51 @@ export default {
   name: 'HomeView',
   components: {
     HorizontalScroll
+  },
+  mounted() {
+
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);  // 只触发一次，进入视口后不再观察
+        }
+      });
+    }, {threshold: 0.1});  // 10% 可见时触发
+
+    fadeInSections.forEach(section => observer.observe(section));
   }
 };
 </script>
 <style scoped lang="scss">
+
 .home {
   .content4 {
     padding: 68px 0;
   }
 
   .content3 {
-    background: #FFFFFF;
+    background: #fff;
     padding-bottom: 70px;
+    background: linear-gradient(-45deg, rgba(#ee7752,0.3), rgba(#e73c7e,0.3), rgba(#23a6d5,0.3), rgba(#23d5ab,0.3));
+    background-size: 400% 400%;
+    animation: gradient 45s ease infinite;
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
     .part-title {
-      font-family: PingFang SC, PingFang SC;
+      font-family: Poppins, Poppins;
       font-size: 66px;
       color: #000000;
       line-height: 76px;
@@ -119,28 +147,27 @@ export default {
 
     .content-list {
       display: flex;
-      width:  90%;
-      max-width: 100%;
-      margin: 0 auto;
+      width: 90%;
+      max-width: 1200px;
+      margin: 80px auto 0;
       justify-content: space-between;
-      margin-top: 80px;
+      flex-wrap: wrap;
 
       .list-item {
-        width: 22%;
-        background: #F8F8FA;
+        width: 49%;
+        background: rgba(255, 255, 255, 0.65);
         border-radius: 11px 11px 11px 11px;
-        padding: 60px 25px 200px;
+        padding: 60px 25px 120px;
         position: relative;
+        margin-top: 20px;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-color: #FFFFFF;
+        cursor: pointer;
 
-        &:hover {
-          .item-title {
-            color: #006FBA;
-
-          }
-        }
 
         .item-title {
-          font-family: PingFang SC, PingFang SC;
+          font-family: Poppins, Poppins;
           font-weight: 600;
           font-size: 27px;
           color: #000000;
@@ -156,24 +183,23 @@ export default {
           font-size: 18px;
           color: #68718B;
           line-height: 25px;
+
         }
 
         button {
           margin: 50px auto;
           cursor: pointer;
-          bottom: 50px;
-          width: 180px;
+          bottom: 0px;
+          padding: 10px 30px;
           background: none;
-          height: 60px;
           border-radius: 11px 11px 11px 11px;
-          border: 1px solid #6A36FF;
           text-align: center;
-          line-height: 60px;
-          font-family: PingFang SC, PingFang SC;
+          border: none;
+          font-family: Poppins, Poppins;
           font-weight: 600;
           font-size: 18px;
           left: calc(50% - 90px);
-          color: #6A36FF;
+          color: #333;
           position: absolute;
 
           &:active {
@@ -186,15 +212,15 @@ export default {
 
   .content2 {
     background: #F7F3FF;
-    padding-bottom: 170px;
+    padding-bottom: 150px;
 
     .content2-content {
-      width:  90%;
-      max-width: 100%;
+      width: 90%;
+      max-width: 1200px;
       margin: 0 auto;
 
       .part-title {
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 500;
         font-size: 54px;
         text-align: center;
@@ -202,11 +228,11 @@ export default {
       }
 
       p {
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 400;
-        font-size: 26px;
+        font-size: 24px;
         line-height: 38px;
-        margin-top: 90px;
+        margin-top: 50px;
       }
     }
   }
@@ -216,8 +242,10 @@ export default {
     margin: 120px auto 0;
     font-family: DM Sans, DM Sans;
     font-weight: 700;
+
     font-size: 60px;
     color: #FFFFFF;
+
     line-height: 66px;
     text-align: center;
     font-style: normal;
@@ -228,8 +256,8 @@ export default {
   .content1 {
     position: relative;
     z-index: 1;
-    width:  90%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 1200px;
     background: #FFFFFF;
     border-radius: 24px 24px 24px 24px;
     padding: 50px;
@@ -247,14 +275,14 @@ export default {
       p {
         line-height: 38px;
         margin-top: 45px;
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 400;
         font-size: 22px;
         color: #8883A7;
       }
 
       .part-title {
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 500;
         font-size: 60px;
         color: #000000;
@@ -396,12 +424,14 @@ export default {
       padding-bottom: 80px;
 
 
-      .content2-content{
+      .content2-content {
         font-size: 18px;
+
         .part-title {
           font-size: 36px;
           margin-top: 50px;
         }
+
         p {
           font-size: 18px;
           line-height: 28px;
@@ -430,6 +460,7 @@ export default {
       .right {
         margin-left: 0;
         width: 100%;
+
         p {
           font-size: 18px;
           line-height: 28px;

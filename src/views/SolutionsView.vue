@@ -2,16 +2,16 @@
   <div class="about">
     <div class="part1">
       <div class="bg-box"></div>
-      <div class="sub-title">
+      <div class="sub-title fade-in-section">
         {{ $t('solutionPart1Title1') }}
       </div>
-      <div class="title">
+      <div class="title fade-in-section">
         {{ $t('solutionPart1Title2') }}
       </div>
     </div>
     <div class="part2">
-      <div class="content-list">
-        <div class="list-item">
+      <div class="content-list ">
+        <div class="list-item fade-in-section">
           <div class="title">
             {{ $t('solutionPart2Title1') }}
           </div>
@@ -22,7 +22,7 @@
             {{ $t('solutionPart2Content12') }}
           </p>
         </div>
-        <div class="list-item">
+        <div class="list-item fade-in-section">
           <div class="title">
             {{ $t('solutionPart2Title2') }}
           </div>
@@ -34,7 +34,7 @@
           </p>
         </div>
 
-        <div class="list-item">
+        <div class="list-item fade-in-section">
           <div class="title">
             {{ $t('solutionPart2Title3') }}
           </div>
@@ -45,7 +45,7 @@
             {{ $t('solutionPart2Content32') }}
           </p>
         </div>
-        <div class="list-item">
+        <div class="list-item fade-in-section">
           <div class="title">
             {{ $t('solutionPart2Title4') }}
           </div>
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="part3">
+    <div class="part3 fade-in-section">
       <button>
         {{ $t("Apply Today") }}
       </button>
@@ -72,18 +72,18 @@
 .about {
   .part3 {
     padding: 100px 0;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     button {
-      width: 357px;
-      height: 104px;
+      padding: 10px 30px;
       border-radius: 14px 14px 14px 14px;
-      border: 1px solid #6A36FF;
-      margin-left: calc(50% - 177px);
-      font-family: PingFang SC, PingFang SC;
+      border: 2px solid #6A36FF;
+      margin: 0 auto;
+      font-family: Poppins;
       font-weight: 500;
-      font-size: 41px;
+      font-size: 30px;
       color: #6A36FF;
-      line-height: 43px;
       background: none;
       text-align: center;
     }
@@ -120,20 +120,20 @@
 
 
         .title {
-          font-family: PingFang SC, PingFang SC;
+          font-family: Poppins, Poppins;
           font-weight: 500;
-          font-size: 54px;
+          font-size: 36px;
           color: #000000;
           line-height: 57px;
           margin-bottom: 20px;
         }
 
         p {
-          font-family: PingFang SC, PingFang SC;
+          font-family: Poppins, Poppins;
           font-weight: 400;
-          font-size: 26px;
+          font-size: 18px;
           color: #777777;
-          line-height: 36px;
+          line-height: 24px;
           margin-top: 30px;
 
         }
@@ -172,6 +172,10 @@
       line-height: 40px;
       position: relative;
       z-index: 1;
+      background-color: transparent;
+      background-image: linear-gradient(127deg, #3C03BA 25%, #ED1E79 63%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
     }
 
     .title {
@@ -301,5 +305,25 @@
 }
 
 </style>
-<script setup>
+<script>
+
+export default {
+  components: {
+  },
+  mounted() {
+
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);  // 只触发一次，进入视口后不再观察
+        }
+      });
+    }, { threshold: 0.1 });  // 10% 可见时触发
+
+    fadeInSections.forEach(section => observer.observe(section));
+  }
+};
 </script>

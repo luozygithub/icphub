@@ -8,6 +8,16 @@ export default {
   data() {
     return {}
   },
+  mounted() {
+    const navbar = document.getElementById('HUBHeader');
+    const maxScroll = 500;
+    const maxOpacity = 0.9
+    window.addEventListener('scroll', () => {
+      const scrollTop = Math.min(window.scrollY, maxScroll);
+      const opacity = (scrollTop / maxScroll) < maxOpacity?scrollTop / maxScroll:maxOpacity;
+      navbar.style.backgroundColor = `rgba(162,161,255, ${opacity})`;
+    });
+  },
   methods: {
     changeLng() {
       if (this.$i18n.locale == 'zh') {
@@ -22,7 +32,7 @@ export default {
 </script>
 
 <template>
-  <div class="HUBHeader">
+  <div class="HUBHeader" id="HUBHeader">
     <div class="header-box">
       <img src="@/assets/images/logo.png" alt="" class="logo">
       <MenuCom class="menu"/>
@@ -35,6 +45,7 @@ export default {
           <div v-show="$i18n.locale == 'en'"><strong>EN</strong>/中文</div>
         </div>
       </div>
+      <MenuCom class="menu m-menu"/>
     </div>
 
   </div>
@@ -44,7 +55,7 @@ export default {
 .header-box {
   min-width: 1200px;
   width: 90%;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0px auto;
   padding: 24px 0;
   display: flex;
@@ -53,6 +64,13 @@ export default {
 }
 
 .HUBHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: none;
+  z-index: 100;
+
   .right-content {
     display: flex;
     align-items: center;
@@ -82,7 +100,7 @@ export default {
   }
 
   .btn {
-    font-family: PingFang SC, PingFang SC;
+    font-family: Poppins, Poppins;
     font-weight: 400;
     font-size: 12px;
     color: #000000;
@@ -94,9 +112,9 @@ export default {
     display: flex;
 
     .nav-item {
-      font-family: DM Sans, DM Sans;
+      font-family: Poppins;
 
-      font-size: 16px;
+      font-size: 18px;
       color: #000000;
       padding-right: 100px;
       cursor: pointer;
@@ -110,6 +128,9 @@ export default {
 
   .menu {
     margin-left: 20px;
+  }
+  .m-menu{
+    display: none;
   }
 }
 
@@ -181,8 +202,11 @@ export default {
     }
 
     .menu {
-      display: block;
+      display: none;
       width: 100px;
+    }
+    .m-menu{
+      display: block!important;
     }
 
     .nav-list {
@@ -201,11 +225,13 @@ export default {
     .right-content {
       margin-top: 10px;
       width: 100%;
-      justify-content: space-between;
-
+      justify-content: flex-end;
+      flex-grow: 0;
+      margin-left: 0;
       .join-btn {
         padding: 8px 16px;
         font-size: 12px;
+        display: none;
         width: 80px;
         text-align: center;
       }

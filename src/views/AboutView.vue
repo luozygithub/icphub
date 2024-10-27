@@ -2,10 +2,10 @@
   <div class="about">
     <div class="bg-box"></div>
 
-    <div class="title">
+    <div class="title fade-in-section">
       {{ $t("aboutTitle") }}
     </div>
-    <div class="content1">
+    <div class="content1 fade-in-section">
 
       <img src="@/assets/images/home_img1.png" alt="" class="left">
       <div class="right">
@@ -17,10 +17,10 @@
         </p>
       </div>
     </div>
-    <div class="content2">
+    <div class="content2 fade-in-section">
       <div class="content2-content">
         <div class="left">
-          <div class="part-tip">
+          <div class="part-tip ">
             {{ $t("aboutContent3Tip") }}
           </div>
           <div class="part-title">
@@ -55,13 +55,13 @@
     </div>
     <div class="content3">
       <div class="content3-content">
-        <div class="part-tip">
+        <div class="part-tip fade-in-section">
           {{ $t("aboutContent4Tip") }}
         </div>
-        <div class="part-title">
+        <div class="part-title fade-in-section">
           {{ $t("aboutContent4Title") }}
         </div>
-        <div class="lists">
+        <div class="lists fade-in-section">
           <div class="item">
             <div class="value">
               270<span>+</span>
@@ -98,13 +98,13 @@
       </div>
     </div>
     <div class="content4">
-      <div class="part-tip">
+      <div class="part-tip fade-in-section">
         {{ $t("aboutContent5Tip") }}
       </div>
-      <div class="part-title">
+      <div class="part-title fade-in-section">
         {{ $t("aboutContent5TittlePart1") }}
       </div>
-      <div class="btns">
+      <div class="btns fade-in-section">
         <div class="btn">
           <img style="margin-right: 3px" src="@/assets/images/telegram.png" width="24" alt="">
           {{ $t("aboutContent5Button1") }}
@@ -115,7 +115,7 @@
         </div>
       </div>
     </div>
-    <div class="content5">
+    <div class="content5 fade-in-section">
       <HorizontalScroll></HorizontalScroll>
     </div>
   </div>
@@ -142,7 +142,7 @@
     padding: 88px 0 77px;
 
     .part-tip {
-      font-family: PingFang SC, PingFang SC;
+      font-family: Poppins, Poppins;
       font-weight: 500;
       font-size: 23px;
       color: #9190B0;
@@ -156,7 +156,7 @@
       color: #14358A;
       line-height: 77px;
       width: 700px;
-      max-width: 100%;
+      max-width: 1200px;
       margin:  20px auto 0;
     }
 
@@ -166,15 +166,15 @@
       margin-top: 45px;
 
       .btn {
-        width: 220px;
+        width: 230px;
         height: 62px;
+        text-align: center;
         border-radius: 11px 11px 11px 11px;
         border: 1px solid;
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 500;
         font-size: 18px;
         line-height: 25px;
-        text-align: left;
         display: flex;
         cursor: pointer;
         user-select: none;
@@ -209,7 +209,7 @@
 
     .content3-content {
       width:  90%;
-      max-width: 100%;
+      max-width: 1200px;
       border-radius: 24px 24px 24px 24px;
       margin: 0 auto;
 
@@ -217,15 +217,17 @@
         font-size: 41px;
         color: #FFFFFF;
         text-align: center;
+
       }
 
       .part-title {
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 500;
-        font-size: 72px;
+        font-size: 50px;
         text-align: center;
-        margin-top: 72px;
+        margin-top: 50px;
         color: #FFFFFF;
+
       }
 
       .lists {
@@ -234,20 +236,20 @@
         margin-top: 72px;
 
         .item {
-          font-family: PingFang SC, PingFang SC;
+          font-family: Poppins, Poppins;
           .value {
             font-weight: 500;
-            font-size: 90px;
+            font-size: 70px;
             color: #FFFFFF;
             line-height: 119px;
             span {
-              font-family: PingFang SC, PingFang SC;
+              font-family: Poppins, Poppins;
               color: #7e43f8;
             }
           }
 
           .name {
-            font-family: PingFang SC, PingFang SC;
+            font-family: Poppins, Poppins;
             font-weight: 400;
             font-size: 27px;
             color: #FFFFFF;
@@ -261,7 +263,7 @@
 
   .content1 {
     width:  90%;
-    max-width: 100%;
+    max-width: 1200px;
     background: #FFFFFF;
     border-radius: 24px 24px 24px 24px;
     padding: 50px;
@@ -283,14 +285,14 @@
       p {
         line-height: 38px;
         margin-top: 45px;
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 400;
         font-size: 22px;
         color: #8883A7;
       }
 
       .part-title {
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 500;
         font-size: 60px;
         color: #000000;
@@ -311,12 +313,12 @@
     .content2-content {
       width:  90%;
       background: #F7F3FF;
-      max-width: 100%;
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
 
       .part-title {
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 500;
         font-size: 36px;
         color: #000000;
@@ -325,7 +327,7 @@
       }
 
       p {
-        font-family: PingFang SC, PingFang SC;
+        font-family: Poppins, Poppins;
         font-weight: 400;
         font-size: 18px;
         color: #6B6A6F;
@@ -342,7 +344,7 @@
         padding-right: 5%;
 
         .part-tip {
-          font-family: PingFang SC, PingFang SC;
+          font-family: Poppins, Poppins;
           font-size: 27px;
           color: #8483A7;
           line-height: 28px;
@@ -366,7 +368,7 @@
             }
 
             .name {
-              font-family: PingFang SC, PingFang SC;
+              font-family: Poppins, Poppins;
               font-weight: 400;
               font-size: 20px;
               color: #000000;
@@ -377,20 +379,18 @@
         }
 
         button {
-          width: 297px;
-          height: 77px;
           display: flex;
           justify-content: center;
           align-items: center;
           border-radius: 9px 9px 9px 9px;
-          border: 2px solid #6A36FF;
-          font-family: PingFang SC, PingFang SC;
+          border: none;
+          font-family: Poppins, Poppins;
           font-weight: 500;
           background: none;
           cursor: pointer;
           font-size: 23px;
           color: #6A36FF;
-          line-height: 24px;
+          line-height: 0!important;
           text-align: center;
           font-style: normal;
           text-transform: none;
@@ -464,6 +464,7 @@
         font-size: 32px;
         line-height: 40px;
         margin-top: 15px;
+        width: 100%;
       }
 
       .btns {
@@ -771,6 +772,21 @@ import HorizontalScroll from "@/components/HorizontalScroll.vue";
 export default {
   components: {
     HorizontalScroll
+  },
+  mounted() {
+
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);  // 只触发一次，进入视口后不再观察
+        }
+      });
+    }, { threshold: 0.1 });  // 10% 可见时触发
+
+    fadeInSections.forEach(section => observer.observe(section));
   }
 };
 </script>
