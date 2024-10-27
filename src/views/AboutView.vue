@@ -280,27 +280,24 @@
 
     .right {
       margin-left: 50px;
-      position: relative;
-      z-index: 1;
+
       p {
         line-height: 38px;
         margin-top: 45px;
         font-family: Poppins, Poppins;
         font-weight: 400;
-        font-size: 22px;
+        font-size: 20px;
         color: #8883A7;
       }
 
       .part-title {
         font-family: Poppins, Poppins;
         font-weight: 500;
-        font-size: 60px;
+        font-size: 40px;
         color: #000000;
-        line-height: 64px;
-
         text-align: left;
         font-style: normal;
-        margin: 60px 0 0 0px;
+        margin: 30px 0 0 0px;
       }
     }
   }
