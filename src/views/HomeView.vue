@@ -114,6 +114,7 @@ export default {
 <style scoped lang="scss">
 
 .home {
+  min-height: 90vh;
   .content4 {
     padding: 68px 0;
   }
@@ -197,14 +198,12 @@ export default {
           border: none;
           font-family: Poppins, Poppins;
           font-weight: 600;
-          font-size: 18px;
+          font-size: 16px;
+          width: 180px;
           left: calc(50% - 90px);
           color: #333;
           position: absolute;
 
-          &:active {
-            transform: translate(5px, 5px);
-          }
         }
       }
     }

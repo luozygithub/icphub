@@ -10,12 +10,17 @@ export default {
   },
   mounted() {
     const navbar = document.getElementById('HUBHeader');
+
+    const logo = document.getElementById('logo');
+
     const maxScroll = 500;
     const maxOpacity = 0.9
     window.addEventListener('scroll', () => {
       const scrollTop = Math.min(window.scrollY, maxScroll);
       const opacity = (scrollTop / maxScroll) < maxOpacity?scrollTop / maxScroll:maxOpacity;
       navbar.style.backgroundColor = `rgba(162,161,255, ${opacity})`;
+      navbar.style.height = 123 -  opacity * 50 + "px"
+      logo.style.width   = 126  -  opacity * 50 + "px"
     });
   },
   methods: {
@@ -34,7 +39,9 @@ export default {
 <template>
   <div class="HUBHeader" id="HUBHeader">
     <div class="header-box">
-      <img src="@/assets/images/logo.png" alt="" class="logo">
+      <div class="logo-box">
+        <img src="@/assets/images/logo.png" alt="" class="logo" @click="$router.push('/')" id="logo">
+      </div>
       <MenuCom class="menu"/>
       <div class="right-content">
         <div class="join-btn">
@@ -57,7 +64,6 @@ export default {
   width: 90%;
   max-width: 1200px;
   margin: 0px auto;
-  padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -69,8 +75,10 @@ export default {
   left: 0;
   width: 100%;
   background: none;
+  display: flex;
+  align-items: center;
   z-index: 100;
-
+  height: 123px;
   .right-content {
     display: flex;
     align-items: center;
@@ -97,8 +105,11 @@ export default {
 
   .logo {
     width: 126px;
+    cursor: pointer;
   }
-
+  .logo-box{
+    width: 126px;
+  }
   .btn {
     font-family: Poppins, Poppins;
     font-weight: 400;
@@ -206,7 +217,8 @@ export default {
       width: 100px;
     }
     .m-menu{
-      display: block!important;
+      display: flex!important;
+      justify-content: flex-end;
     }
 
     .nav-list {

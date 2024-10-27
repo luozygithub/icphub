@@ -253,7 +253,7 @@ export default {
             input {
               width: 100%;
               height: 50px;
-              font-size: 18px;
+              font-size: 16px;
             }
             button {
               width: 100px;

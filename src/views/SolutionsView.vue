@@ -70,6 +70,7 @@
 </template>
 <style scoped lang="scss">
 .about {
+  min-height: 90vh;
   .part3 {
     padding: 100px 0;
     display: flex;

@@ -122,6 +122,7 @@
 </template>
 <style scoped lang="scss">
 .about {
+  min-height: 90vh;
   .title {
     margin: 120px auto 75px;
     width: 806px;
@@ -192,6 +193,10 @@
           background: none;
           border: 1px solid #6A36FF;
 
+        }
+
+        &:active {
+          transform: translate(5px, 5px);
         }
       }
 

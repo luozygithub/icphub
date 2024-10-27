@@ -2,7 +2,7 @@
   <div id="app">
     <div class="app-content">
       <HUBHeader/>
-      <router-view/>
+      <router-view class="content"/>
       <HUBFooter/>
     </div>
     <div class="appbg"/>
@@ -37,6 +37,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.content{
+  min-height: 90vh;
+}
 body, button, input, select, p {
 
   line-height: 1.5!important;
@@ -55,7 +58,7 @@ body, button, input, select, p {
   background-size: 100%;
   min-height: 100vh;
   position: relative;
-  padding-top: 130px;
+  padding-top: 123px;
   .bg-box{
     position: absolute;
     top: 60px;
