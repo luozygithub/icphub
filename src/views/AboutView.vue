@@ -152,7 +152,7 @@
     .part-title {
       font-family: DM Sans, DM Sans;
       font-weight: 700;
-      font-size: 56px;
+        font-size: 53px;
       color: #14358A;
       line-height: 77px;
       width: 700px;
